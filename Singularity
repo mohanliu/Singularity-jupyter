@@ -10,7 +10,12 @@ From: continuumio/anaconda3
 %post
 
      # Install jupyter notebook
-     /opt/conda/bin/conda install jupyter -y --quiet 
+     /opt/conda/bin/conda install jupyter -y --quiet
+     # Install additional packages
+     conda install lightgbm sklearn --quiet
+     # Update conda packages
+     conda update --all -y --quiet
+     conda clean --all -y --quiet
      mkdir /opt/notebooks
      apt-get autoremove -y
      apt-get clean
