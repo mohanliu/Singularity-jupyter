@@ -8,7 +8,10 @@ From: continuumio/anaconda3
      exec /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --allow-root --port=8888 --no-browser
 
 %post
-
+     
+     # Export conda
+     export PATH=/opt/conda/bin/conda:$PATH
+     ~/.bashrc
      # Install jupyter notebook
      /opt/conda/bin/conda install jupyter -y --quiet
      # Install additional packages
