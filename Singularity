@@ -1,6 +1,16 @@
 BootStrap: docker
 From: continuumio/anaconda3
 
+%labels
+   Maintainer Chen Chen
+   
+%environment
+
+     conda=/opt/conda/bin/conda
+     pip=/opt/conda/bin/pip
+     python3=/opt/conda/bin/python
+     export conda pip python3
+     
 %runscript
 
      echo "Starting notebook..."
@@ -23,3 +33,8 @@ From: continuumio/anaconda3
      # create bind points for HPCC environment
      mkdir -p /projects
      mkdir -p /home
+
+%test
+     
+     echo "Testing python..."
+     /opt/conda/bin/python -V
