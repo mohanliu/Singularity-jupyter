@@ -13,7 +13,7 @@ From: continuumio/anaconda3
      /opt/conda/bin/conda install jupyter -y --quiet
      # Install additional packages
      /opt/conda/bin/conda install -c conda-forge pip lightgbm scikit-learn pandas seaborn matplotlib tqdm opencv pillow scikit-image --quiet
-     pip install -U imutils -y -q
+     /opt/conda/bin/pip install -U imutils -y -q
      # Update conda packages
      /opt/conda/bin/conda update --all -y --quiet
      /opt/conda/bin/conda clean --all -y --quiet
