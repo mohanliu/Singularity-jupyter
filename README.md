@@ -1,4 +1,4 @@
-# Jupyter
+# Jupyter Notebook Server Singularity Image
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/1443)
 
 This is a forked jupyter notebook server composer file for building Singularity image to be used on HPCC envionrments.
