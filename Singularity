@@ -12,7 +12,7 @@ From: continuumio/anaconda3
      # Install jupyter notebook
      /opt/conda/bin/conda install jupyter -y --quiet
      # Install additional packages
-     /opt/conda/bin/conda install lightgbm sklearn --quiet
+     /opt/conda/bin/conda install -c conda-forge lightgbm sklearn --quiet
      # Update conda packages
      /opt/conda/bin/conda update --all -y --quiet
      /opt/conda/bin/conda clean --all -y --quiet
