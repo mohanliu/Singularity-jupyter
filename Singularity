@@ -19,3 +19,6 @@ From: continuumio/anaconda3
      mkdir /opt/notebooks
      apt-get autoremove -y
      apt-get clean
+     # create bind points for HPCC environment
+     mkdir -p /projects
+     mkdir -p /home
