@@ -3,6 +3,7 @@ From: continuumio/anaconda3
 
 %labels
    Maintainer Chen Chen (chenchen.bme@gmail.com)
+   Version v0.1
    
 %environment
      conda=/opt/conda/bin/conda
@@ -15,7 +16,12 @@ From: continuumio/anaconda3
      echo "Open browser to localhost:8888"
      exec /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --allow-root --port=8888 --no-browser
 
-%post     
+%post   
+     # Define build time envionrment
+     conda=/opt/conda/bin/conda
+     pip=/opt/conda/bin/pip
+     python3=/opt/conda/bin/python
+     export conda pip python3
      # Install jupyter notebook
      conda install jupyter -y --quiet
      # Install additional packages
