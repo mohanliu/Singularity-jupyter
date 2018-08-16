@@ -24,7 +24,7 @@ From: continuumio/anaconda3
      # Update conda packages
      conda update --all -y --quiet
      conda clean --all -y --quiet
-     mkdir /opt/notebooks
+     #mkdir /opt/notebooks
      apt-get autoremove -y
      apt-get clean
      # create bind points for HPCC environment
