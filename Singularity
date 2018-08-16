@@ -1,5 +1,5 @@
 BootStrap: docker
-From: continuumio/anaconda3
+From: continuumio/miniconda
 
 %labels
    Maintainer Chen Chen (chenchen.bme@gmail.com)
@@ -20,6 +20,7 @@ From: continuumio/anaconda3
      # Install jupyter notebook
      /opt/conda/bin/conda install jupyter -y --quiet
      # Install additional packages
+     /opt/conda/bin/conda install -c conda-forge scipy numpy pandas -y -q
      /opt/conda/bin/conda install -c conda-forge pip lightgbm scikit-learn pandas seaborn matplotlib tqdm opencv pillow scikit-image -y -q
      /opt/conda/bin/pip install -U pip -q
      /opt/conda/bin/pip install -U imutils -q
