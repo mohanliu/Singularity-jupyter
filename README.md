@@ -26,4 +26,5 @@ ssh -L 8888:localhost:<some_open_port> <netid>@quest.northwestern.edu
 This enables local port forwarding which will forward local port `<some_open_port>`, `8888` for example, to the remote host's port `8888`. This way we can establish connection directly by using `localhost:<some_open_port>` in our local machine as if it is running on the remote machine.
 
 Similarly, SSH client like PuTTY can do the same.
+
 ![](/imgs/port-forwarding-PuTTY.png)
