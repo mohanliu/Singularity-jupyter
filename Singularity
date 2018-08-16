@@ -2,7 +2,7 @@ BootStrap: docker
 From: continuumio/anaconda3
 
 %labels
-   Maintainer Chen Chen
+   Maintainer Chen Chen (chenchen.bme@gmail.com)
    
 %environment
 
@@ -20,13 +20,13 @@ From: continuumio/anaconda3
 %post
      
      # Install jupyter notebook
-     /opt/conda/bin/conda install jupyter -y --quiet
+     conda install jupyter -y --quiet
      # Install additional packages
-     /opt/conda/bin/conda install -c conda-forge pip lightgbm scikit-learn pandas seaborn matplotlib tqdm opencv pillow scikit-image -y -q
-     /opt/conda/bin/pip install -U imutils -q
+     conda install -c conda-forge pip lightgbm scikit-learn pandas seaborn matplotlib tqdm opencv pillow scikit-image -y -q
+     pip install -U imutils -q
      # Update conda packages
-     /opt/conda/bin/conda update --all -y --quiet
-     /opt/conda/bin/conda clean --all -y --quiet
+     conda update --all -y --quiet
+     conda clean --all -y --quiet
      mkdir /opt/notebooks
      apt-get autoremove -y
      apt-get clean
@@ -37,4 +37,4 @@ From: continuumio/anaconda3
 %test
      
      echo "Testing python..."
-     /opt/conda/bin/python -V
+     python3 -V
