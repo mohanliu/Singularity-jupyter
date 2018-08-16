@@ -3,7 +3,7 @@
 
 This is a forked jupyter notebook server composer file for building Singularity image to be used on HPCC envionrments. The short tutorial below are designed for [Northwestern University's QUEST computing cluster](https://www.it.northwestern.edu/research/user-services/quest/overview.html).
 
-The Singularity image will be build automatically and is hosted on [Singularity Hub](). To invoke a jupyter notebook instance without using any sudo previlage use (for example, on Northwestern University's QUEST computing cluster)
+The Singularity image will be build automatically and is hosted on [Singularity Hub](https://www.singularity-hub.org). To invoke a jupyter notebook instance without using any sudo previlage use (for example, on Northwestern University's QUEST computing cluster)
 
 ```bash
 singularity run -B $PWD:/run/user shub://chenchen2015/Singularity-jupyter
