@@ -1,5 +1,5 @@
 BootStrap: docker
-From: continuumio/miniconda
+From: continuumio/miniconda3
 
 %labels
    Maintainer Chen Chen (chenchen.bme@gmail.com)
@@ -27,7 +27,7 @@ From: continuumio/miniconda
      # Update conda packages
      /opt/conda/bin/conda update --all -y --quiet
      /opt/conda/bin/conda clean --all -y --quiet
-     #mkdir /opt/notebooks
+     mkdir /opt/notebooks
      apt-get autoremove -y
      apt-get clean
      # create bind points for HPCC environment
