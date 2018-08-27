@@ -11,10 +11,6 @@ cd singularity-$VERSION
 make
 sudo make install
 
-# Export alias
-alias singularity="/usr/local/bin/singularity"
-echo "alias singularity='/usr/local/bin/singularity'" >> ~/.bashrc
-
 # Test version
 singularity --version
 sudo singularity --version
