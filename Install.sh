@@ -13,4 +13,4 @@ sudo make install
 
 # Test version
 singularity --version
-sudo singularity --version
+sudo $(which singularity) --version
