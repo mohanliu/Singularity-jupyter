@@ -16,6 +16,11 @@ singularity pull --name jupyter.img shub://chenchen2015/Singularity-jupyter
 singularity run -B $PWD:/run/user jupyter.img
 ```
 
+To use the image in an interactive shell, use:
+```bash
+singularity shell -B $PWD:/projects shub://chenchen2015/Singularity-jupyter
+```
+
 ## Machine Learning Image
 An additional image designed for machine learning is also included under tag `ML`. It is loaded with essential machine learning libraries and is built on top of the basic scientific jupyter notebook server image. To use the ML image, use `shub://chenchen2015/Singularity-jupyter:ML`:
 ```bash
@@ -25,6 +30,11 @@ or
 ```bash
 singularity pull --name jupyter-ML.img shub://chenchen2015/Singularity-jupyter:ML
 singularity run -B $PWD:/run/user jupyter-ML.img
+```
+
+Similarly, to use the image in an interactive shell:
+```bash
+singularity shell -B $PWD:/projects shub://chenchen2015/Singularity-jupyter:ML
 ```
 
 ## Port Forwarding
