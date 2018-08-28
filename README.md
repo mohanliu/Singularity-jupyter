@@ -17,7 +17,7 @@ singularity run -B $PWD:/run/user jupyter.img
 ```
 
 ## Machine Learning Image
-An additional image designed for machine learning is also included under tag `ML`. It is loaded with most popular machine learning libraries and is built on top of the basic scientific jupyter notebook server image. To use the ML image, use `shub://chenchen2015/Singularity-jupyter:ML`:
+An additional image designed for machine learning is also included under tag `ML`. It is loaded with essential machine learning libraries and is built on top of the basic scientific jupyter notebook server image. To use the ML image, use `shub://chenchen2015/Singularity-jupyter:ML`:
 ```bash
 singularity run -B $PWD:/run/user shub://chenchen2015/Singularity-jupyter:ML
 ```
