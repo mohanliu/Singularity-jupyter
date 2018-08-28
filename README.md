@@ -1,19 +1,30 @@
 # Jupyter Notebook Server Singularity Image
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/1443)
 
-This is a forked jupyter notebook server composer file for building Singularity image to be used on HPCC envionrments. The short tutorial below are designed for [Northwestern University's QUEST computing cluster](https://www.it.northwestern.edu/research/user-services/quest/overview.html).
+This is a forked jupyter notebook server composer file for building Singularity image to be used in HPCC envionrments. The short tutorial below are designed for [Northwestern University's QUEST computing cluster](https://www.it.northwestern.edu/research/user-services/quest/overview.html) but likely can be applied to many other HPCC and cloud computing IasS like AWS EC2.
 
-The Singularity image will be build automatically and is hosted on [Singularity Hub](https://www.singularity-hub.org). To invoke a jupyter notebook instance without using any sudo previlage use (for example, on Northwestern University's QUEST computing cluster)
+The Singularity image is automatically built and hosted on [Singularity Hub](https://www.singularity-hub.org). To invoke a basic scientific jupyter notebook server without using any sudo previlage use (for example, on Northwestern University's QUEST computing cluster)
 
 ```bash
 singularity run -B $PWD:/run/user shub://chenchen2015/Singularity-jupyter
 ```
-This will pull the image from Singularity Hub and run a jupyter notebook instance.
+This will pull the image from Singularity Hub and run a basic jupyter notebook instance loaded with essential libraries supporting research computing.
 
 Alternatively, you could download the pre-built image first and run it locally
 ```bash
 singularity pull --name jupyter.img shub://chenchen2015/Singularity-jupyter
 singularity run -B $PWD:/run/user jupyter.img
+```
+
+## Machine Learning Image
+An additional image designed for machine learning is also included under tag `ML`. It is loaded with most popular machine learning libraries and is built on top of the basic scientific jupyter notebook server image. To use the ML image, use `shub://chenchen2015/Singularity-jupyter:ML`:
+```bash
+singularity run -B $PWD:/run/user shub://chenchen2015/Singularity-jupyter:ML
+```
+or 
+```bash
+singularity pull --name jupyter-ML.img shub://chenchen2015/Singularity-jupyter:ML
+singularity run -B $PWD:/run/user jupyter-ML.img
 ```
 
 ## Port Forwarding
