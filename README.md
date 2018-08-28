@@ -22,19 +22,19 @@ singularity shell -B $PWD:/projects shub://chenchen2015/Singularity-jupyter
 ```
 
 ## Machine Learning Image
-An additional image designed for machine learning is also included under tag `ML`. It is loaded with essential machine learning libraries and is built on top of the basic scientific jupyter notebook server image. To use the ML image, use `shub://chenchen2015/Singularity-jupyter:ML`:
+An additional image designed for machine learning is also included under tag `ml`. It is loaded with essential machine learning libraries and is built on top of the basic scientific jupyter notebook server image. To use the ML image, use `shub://chenchen2015/Singularity-jupyter:ml`:
 ```bash
-singularity run -B $PWD:/run/user shub://chenchen2015/Singularity-jupyter:ML
+singularity run -B $PWD:/run/user shub://chenchen2015/Singularity-jupyter:ml
 ```
 or 
 ```bash
-singularity pull --name jupyter-ML.img shub://chenchen2015/Singularity-jupyter:ML
-singularity run -B $PWD:/run/user jupyter-ML.img
+singularity pull --name jupyter-ml.img shub://chenchen2015/Singularity-jupyter:ml
+singularity run -B $PWD:/run/user jupyter-ml.img
 ```
 
 Similarly, to use the image in an interactive shell:
 ```bash
-singularity shell -B $PWD:/projects shub://chenchen2015/Singularity-jupyter:ML
+singularity shell -B $PWD:/projects shub://chenchen2015/Singularity-jupyter:ml
 ```
 
 ## Port Forwarding
