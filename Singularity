@@ -3,7 +3,7 @@ From: continuumio/miniconda3
 
 %labels
    Maintainer Chen Chen (chenchen.bme@gmail.com)
-   Version v0.1
+   Version v0.2
    
 %environment
      conda=/opt/conda/bin/conda
