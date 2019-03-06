@@ -14,7 +14,7 @@ From: chenchen2015/Singularity-jupyter
 %runscript
      echo "Starting notebook..."
      echo "Open browser to localhost:8888"
-     exec /opt/conda/bin/jupyter notebook --notebook-dir=/projects --ip='*' --allow-root --port=8888 --no-browser
+     exec /opt/conda/bin/jupyter notebook --notebook-dir=/projects --allow-root --port=8888 --no-browser
 
 %post   
      # Install additional packages
